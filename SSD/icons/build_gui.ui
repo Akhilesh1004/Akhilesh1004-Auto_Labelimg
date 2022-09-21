@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1440</width>
+    <height>900</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1440</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen"/>
+    <addaction name="actionOpen_Dir"/>
+    <addaction name="actionChange_Save_Dir"/>
+    <addaction name="actionOpen_Annotation"/>
+    <addaction name="separator"/>
+    <addaction name="actionSave"/>
+    <addaction name="actionSave_as"/>
+    <addaction name="actionClose"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <addaction name="actionCreate_BounderBox"/>
+    <addaction name="actionDuplicate_BounderBOx"/>
+    <addaction name="actionDelete_BounderBox"/>
+    <addaction name="actionBox_Line_Color"/>
+    <addaction name="separator"/>
+    <addaction name="actionEdit_Label"/>
+    <addaction name="actionAute_Label"/>
+    <addaction name="actionImage_Quality_Estimater"/>
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="title">
+     <string>View</string>
+    </property>
+    <addaction name="actionAuto_Save_Mode"/>
+    <addaction name="actionDisplay_Label"/>
+    <addaction name="separator"/>
+    <addaction name="actionZoom_in"/>
+    <addaction name="actionZoom_out"/>
+    <addaction name="actionOriginal_Size"/>
+   </widget>
+   <widget class="QMenu" name="menuhelp">
+    <property name="title">
+     <string>help</string>
+    </property>
+    <addaction name="actionAbout"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuView"/>
+   <addaction name="menuhelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="baseSize">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="toolTipDuration">
+    <number>-1</number>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="movable">
+    <bool>true</bool>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>40</width>
+     <height>40</height>
+    </size>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>LeftToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionOpen"/>
+   <addaction name="actionOpen_Dir"/>
+   <addaction name="actionChange_Save_Dir"/>
+   <addaction name="actionPrev"/>
+   <addaction name="actionNext"/>
+   <addaction name="actionSave"/>
+   <addaction name="actionCreate_BounderBox"/>
+   <addaction name="actionDelete_BounderBox"/>
+   <addaction name="actionClose"/>
+   <addaction name="actionZoom_in"/>
+   <addaction name="actionZoom_out"/>
+   <addaction name="actionOriginal_Size"/>
+  </widget>
+  <action name="actionOpen">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/folder.png</normaloff>icons/folder.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionOpen_Dir">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/folder.png</normaloff>icons/folder.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open Dir</string>
+   </property>
+  </action>
+  <action name="actionChange_Save_Dir">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/folder.png</normaloff>icons/folder.png</iconset>
+   </property>
+   <property name="text">
+    <string>Change Save Dir</string>
+   </property>
+  </action>
+  <action name="actionNext">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/next (1).png</normaloff>icons/next (1).png</iconset>
+   </property>
+   <property name="text">
+    <string>Next</string>
+   </property>
+  </action>
+  <action name="actionPrev">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/previous.png</normaloff>icons/previous.png</iconset>
+   </property>
+   <property name="text">
+    <string>Prev</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/diskette.png</normaloff>icons/diskette.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionSave_as">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/diskette.png</normaloff>icons/diskette.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save as</string>
+   </property>
+  </action>
+  <action name="actionClose">
+   <property name="icon">
+    <iconset>
+     <normaloff>../../Downloads/cancel.png</normaloff>../../Downloads/cancel.png</iconset>
+   </property>
+   <property name="text">
+    <string>Close</string>
+   </property>
+  </action>
+  <action name="actionOpen_Annotation">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/folder.png</normaloff>icons/folder.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open Annotation</string>
+   </property>
+  </action>
+  <action name="actionCreate_BounderBox">
+   <property name="icon">
+    <iconset>
+     <normaloff>../../Downloads/page.png</normaloff>../../Downloads/page.png</iconset>
+   </property>
+   <property name="text">
+    <string>Create BounderBox</string>
+   </property>
+  </action>
+  <action name="actionDuplicate_BounderBOx">
+   <property name="text">
+    <string>Duplicate BounderBox</string>
+   </property>
+  </action>
+  <action name="actionDelete_BounderBox">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/bin.png</normaloff>icons/bin.png</iconset>
+   </property>
+   <property name="text">
+    <string>Delete BounderBox</string>
+   </property>
+  </action>
+  <action name="actionBox_Line_Color">
+   <property name="text">
+    <string>Box Line Color</string>
+   </property>
+  </action>
+  <action name="actionEdit_Label">
+   <property name="text">
+    <string>Edit Label</string>
+   </property>
+  </action>
+  <action name="actionAute_Label">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/label.png</normaloff>icons/label.png</iconset>
+   </property>
+   <property name="text">
+    <string>Auto Label</string>
+   </property>
+  </action>
+  <action name="actionImage_Quality_Estimater">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/estimation.png</normaloff>icons/estimation.png</iconset>
+   </property>
+   <property name="text">
+    <string>Image Quality Estimater</string>
+   </property>
+  </action>
+  <action name="actionAuto_Save_Mode">
+   <property name="text">
+    <string>Auto Save Mode</string>
+   </property>
+  </action>
+  <action name="actionDisplay_Label">
+   <property name="text">
+    <string>Display Label</string>
+   </property>
+  </action>
+  <action name="actionZoom_in">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/zoom-in.png</normaloff>icons/zoom-in.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom in</string>
+   </property>
+  </action>
+  <action name="actionZoom_out">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/magnifying-glass.png</normaloff>icons/magnifying-glass.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom out</string>
+   </property>
+  </action>
+  <action name="actionOriginal_Size">
+   <property name="icon">
+    <iconset>
+     <normaloff>../../Downloads/expand.png</normaloff>../../Downloads/expand.png</iconset>
+   </property>
+   <property name="text">
+    <string>Original Size</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
