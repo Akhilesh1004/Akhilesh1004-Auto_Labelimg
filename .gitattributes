@@ -1,0 +1,2 @@
+SSD/ssd300_mAP_77.43_v2.pth filter=lfs diff=lfs merge=lfs -text
+SSD/weights/ssd300_mAP_77.43_v2.pth filter=lfs diff=lfs merge=lfs -text
