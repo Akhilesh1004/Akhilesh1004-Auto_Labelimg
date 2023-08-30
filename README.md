@@ -8,6 +8,7 @@
 將輸入的圖片切成多個網格（grid），每個網格會產生類別機率、候選框資訊及信心度結合NMS產生結果。(圖1)
 ![image](https://github.com/Akhilesh1004/Akhilesh1004-Auto_Labelimg/blob/dea464e6dc688a80a30706c3cbb4c565c6c588cf/images/Screen%20Shot%202023-08-30%20at%201.14.56%20PM.png)
 >圖 1 YOLO演算法之輸出視窗
+
 候選框資訊:當電腦尋找圖片哪些地方可能包含所需物件時，候選框的格子中所產出的訊息。
 信心度:當電腦標示出有可能符合物件的候選框時，必須要篩選出真正符合物件的候選框並保留，每個候選框內包含物件的信心程度多寡就是信心度，若信心度較低的候選框就會被排除掉。
 NMS:為了消除多餘的候選框，NMS考慮候選框重疊程度，保留信心度最高的候選框，再進行下一步將框分類。
@@ -24,15 +25,19 @@ PyQt的整個程式開發框架，主要包括如下部分(圖2)：
 不同部分資訊交換機制：訊號和槽
 介面操作的事件及捕獲機制
 控制介面顯示和資料儲存分離以及對映的機制：Model/View架構
+
 ![image](https://github.com/Akhilesh1004/Akhilesh1004-Auto_Labelimg/blob/dea464e6dc688a80a30706c3cbb4c565c6c588cf/images/Screen%20Shot%202023-08-30%20at%201.15.03%20PM.png)
 >圖 2 Pyqt之介面
+
 透過這些工具和框架機制，開發人員可以設計對應的GUI圖形化介面、定義不同部件的操作及響應、捕獲部件或應用的訊息以及實現介面顯示元件和資料儲存元件的聯動，從而構造完整的應用程式框架。本專案將二者整合，提供給使用者更方便的影像標註工具。
 
 ## 二、 方法與流程圖 
 ![image](https://github.com/Akhilesh1004/Akhilesh1004-Auto_Labelimg/blob/dea464e6dc688a80a30706c3cbb4c565c6c588cf/images/Screen%20Shot%202023-08-30%20at%201.15.44%20PM.png)
 >圖 3 使用者介面流程圖
+
 ![image](https://github.com/Akhilesh1004/Akhilesh1004-Auto_Labelimg/blob/dea464e6dc688a80a30706c3cbb4c565c6c588cf/images/Screen%20Shot%202023-08-30%20at%201.15.39%20PM.png)
 >圖 4 程式編寫流程圖
+
 首先是構思整個使用過程所需要的結果(圖3)，包括需要出現的選項，點擊選項之後會進到什麼介面等。在構思好使用者整個介面與使用流程之後。我們開始著手規劃編寫程式的流程，包括收集資料、介面設計、結合SSD演算法去實現自動化標註的功能。(圖4)
 
 實驗結果
@@ -45,14 +50,19 @@ PyQt的整個程式開發框架，主要包括如下部分(圖2)：
 ### 3.2 自動標籤流程
 ![image](https://github.com/Akhilesh1004/Akhilesh1004-Auto_Labelimg/blob/dea464e6dc688a80a30706c3cbb4c565c6c588cf/images/Screen%20Shot%202023-08-30%20at%201.15.57%20PM.png)
 >圖 6 選取原圖資料夾
+
 ![image](https://github.com/Akhilesh1004/Akhilesh1004-Auto_Labelimg/blob/dea464e6dc688a80a30706c3cbb4c565c6c588cf/images/Screen%20Shot%202023-08-30%20at%201.16.06%20PM.png)
 >圖 7 圖檔顯示於介面
+
 ![image](https://github.com/Akhilesh1004/Akhilesh1004-Auto_Labelimg/blob/dea464e6dc688a80a30706c3cbb4c565c6c588cf/images/Screen%20Shot%202023-08-30%20at%201.16.12%20PM.png)
 >圖 8 點選自動標籤
+
 ![image](https://github.com/Akhilesh1004/Akhilesh1004-Auto_Labelimg/blob/dea464e6dc688a80a30706c3cbb4c565c6c588cf/images/Screen%20Shot%202023-08-30%20at%201.16.16%20PM.png)
 >圖 9 自動標籤
+
 ![image](https://github.com/Akhilesh1004/Akhilesh1004-Auto_Labelimg/blob/dea464e6dc688a80a30706c3cbb4c565c6c588cf/images/Screen%20Shot%202023-08-30%20at%201.16.22%20PM.png)
 >圖 10 更改標籤名稱
+
 
 選取打開資料夾之按鍵，可以選取存有需要進行標籤之原始圖檔之資料夾，選取完成之後會在介面出現先前選取之圖檔。此時圖檔還未一一進行標籤和轉檔成資料集之格式 (XML檔)。
 
@@ -65,7 +75,9 @@ PyQt的整個程式開發框架，主要包括如下部分(圖2)：
 在自動標籤過程之前，系統會跳出確認開始視窗，在執行自動標籤之後，若需要停下更改方框範圍或是調整標籤資訊，可點選 Stop 按鈕暫停。反之點選 Continue 即可繼續進行自動標籤。(圖11)
 ### 3.4 存檔與更改
 ![image](https://github.com/Akhilesh1004/Akhilesh1004-Auto_Labelimg/blob/dea464e6dc688a80a30706c3cbb4c565c6c588cf/images/Screen%20Shot%202023-08-30%20at%201.16.44%20PM.png)
+
 ![image](https://github.com/Akhilesh1004/Akhilesh1004-Auto_Labelimg/blob/dea464e6dc688a80a30706c3cbb4c565c6c588cf/images/Screen%20Shot%202023-08-30%20at%201.16.49%20PM.png)
+
 ![image](https://github.com/Akhilesh1004/Akhilesh1004-Auto_Labelimg/blob/dea464e6dc688a80a30706c3cbb4c565c6c588cf/images/Screen%20Shot%202023-08-30%20at%201.16.54%20PM.png)
 >圖 12 存檔過程
 
